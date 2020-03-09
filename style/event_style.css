@@ -1,0 +1,24 @@
+body,
+html {
+    height: 100%;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/shop.jpg");
+    height: 20%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+div.event-info {
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+#event-description {
+    padding: 20px;
+    border: 1px solid;
+}
