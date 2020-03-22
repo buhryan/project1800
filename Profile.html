@@ -20,7 +20,7 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="style/profile.css">
 
 </head>
 <body>
@@ -43,42 +43,23 @@
             </button>
             <div class="navbar-collapse collapse" id="navbarsExample01" style="">
               <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                  <a class="nav-link" href="main.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="search.html">Discover</a>
+                </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link disabled" href="Profile.html">Profile</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Discover</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">New Event<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="create_event.html">New Event<span class="sr-only">(current)</span></a>
                   </li>
               </ul>
-              <form class="form-inline my-2 my-md-0">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-              </form>
             </div>
           </button>
         </nav>
     </div>
-
-    <!--Profile Title-->
-    
-    <!--information cards-->
-    <div class="card">
-      <br><br>
-        <div class="card-header">
-          About
-        </div> 
-        <div class="card-body" style=padding:2%>
-          <blockquote class="blockquote mb-3">
-            <p>Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It’s not a story the Jedi would tell you.</p>
-          </blockquote>
-        </div>
-      </div>
-
 
         <!--First set of images-->
 
@@ -111,21 +92,32 @@
                           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                           <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                              <button type="button" class="btn btn-med btn-outline-secondary">View</button>
                             </div>
                             <small class="text-muted">9 mins</small>
                           </div>
                         </div>
                       </div>
                     </div>
-    <div>
-    <nav class="navbar fixed-bottom navbar-center navbar-expand-sm navbar-dark bg-dark">
-        <button class="btn btn-outline-light" type="button">Smaller button</button>
-        <button class="btn btn-outline-light" type="button">Smaller button</button>
-        <button class="btn btn-outline-light" type="button">Smaller button</button>
+<div >
+    <nav class="navbar fixed-bottom navbar-center navbar-expand-sm navbar-dark bg-dark textcenter">
+      <div id="parentButtonDiv">
+      <div id="buttonDiv">  
+        <a href="main.html">
+        <button class="btn btn-outline-light" type="button" id="homeButton">Home</button>
+        </a>
+        <a href="profile.html">
+        <button class="btn btn-outline-light" type="button" id="eventButton">My Events</button>
+        </a>
+        <a href="search.html">
+        <button class="btn btn-outline-light" type="button" id="discoverButton">Discover</button>
+        </a>
+      </div>
+      </div>
     </nav>
 </div>
+
+<input id="btntest" type="button" value="Check" href="main.html">
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
@@ -144,7 +136,9 @@
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
     <script src="scripts/script.js"></script>
-
+<script>
+  document.getElementById("homeButton").onclick="href=main.html";
+</script>
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->

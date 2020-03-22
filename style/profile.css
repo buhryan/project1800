@@ -1,0 +1,9 @@
+#bottomButton {
+    width:30vw;
+}
+#buttonDiv {
+    display: inline-block
+}
+#parentButtonDiv {
+    text-align: center;
+}
