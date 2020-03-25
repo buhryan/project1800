@@ -34,84 +34,89 @@
     <!--Navbar-->
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <h5 class="text-white h4">Working Title</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
-          </div>
+            <div class="bg-dark p-4">
+                <h5 class="text-white h4">Working Title</h5>
+                <span class="text-muted">Toggleable via the navbar brand.</span>
+            </div>
         </div>
         <nav class="navbar fixed-top navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Working Title</a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbarsExample01" style="">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="main.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="search.html">Discover</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Profile.html">Profile</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link disabled" href="create_event.html">New Event<span class="sr-only">(current)</span></a>
-                  </li>
-              </ul>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Discover</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link disabled" href="create_event.html">New Event<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
             </div>
-          </button>
+            </button>
         </nav>
     </div>
 
     <!-- Event Info Entry -->
-    <div id="event-container">
-        <form class="needs-validation" novalidate>
-            <div class="form-group">
-                <label for="inputEventName">Event Name</label>
-                <input type="eventName" class="form-control" id="inputEventName" placeholder="Event Name" required>
-                <div class="invalid-feedback">Please enter an event name.</div>
-            </div>
-            <div class="form-group">
-                <label for="inputEventDescription">Event Description</label>
-                <textarea type="description" class="form-control" id="inputEventDescription" placeholder="Description"
-                    required cols="30" rows="5"></textarea>
-                <div class="invalid-feedback">Please enter a description.</div>
-            </div>
-            <div class="form-group">
-                <label for="inputEventDate">Date</label>
-                <input type="eventDate" class="form-control" id="inputEventDate" placeholder="Date" required>
-                <div class="invalid-feedback">Please enter a date.</div>
-            </div>
-            <div class="form-group">
-                <label for="inputEventTime">Time</label>
-                <input type="eventTime" class="form-control" id="inputEventTime" placeholder="Time" required>
-                <div class="invalid-feedback">Please enter a time.</div>
-            </div>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+    <form id="eventForm">
+        <div id="event-container">
+            <form class="needs-validation" novalidate>
+                <div class="form-group">
+                    <label for="inputEventName">Event Name</label>
+                    <input type="eventName" class="form-control" id="inputEventName" placeholder="Event Name" required>
+                    <div class="invalid-feedback">Please enter an event name.</div>
                 </div>
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile01"
-                        aria-describedby="inputGroupFileAddon01">
-                    <label class="custom-file-label" for="inputGroupFile01">Choose image</label>
+                <div class="form-group">
+                    <label for="inputEventDescription">Event Description</label>
+                    <textarea type="description" class="form-control" id="inputEventDescription"
+                        placeholder="Description" required cols="30" rows="5"></textarea>
+                    <div class="invalid-feedback">Please enter a description.</div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="tags">Tag</label>
-                <select class="form-control" id="tags">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                </select>
-            </div>
-            <div>
-                <button type="submit" class="btn btn-primary">Publish</button>
-            </div>
-        </form>
-    </div>
+                <div class="form-group">
+                    <label for="inputEventDate">Date</label>
+                    <input type="eventDate" class="form-control" id="inputEventDate" placeholder="Date" required>
+                    <div class="invalid-feedback">Please enter a date.</div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEventTime">Time</label>
+                    <input type="eventTime" class="form-control" id="inputEventTime" placeholder="Time" required>
+                    <div class="invalid-feedback">Please enter a time.</div>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01"
+                            aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose image</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tags">Tag</label>
+                    <select class="form-control" id="tags">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="btn btn-primary" id="submit">Publish</button>
+                </div>
+            </form>
+        </div>
+    </form>
 
     <!-- Footer bar -->
     <nav class="navbar fixed-bottom navbar-center navbar-expand-sm navbar-dark bg-dark">
@@ -138,15 +143,15 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <!-- <script src="scripts/firebase_api_carly.js"> </script> -->
+    <script src="scripts/firebase_api_chris.js"></script>
 
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <!-- <script src="scripts/script.js"></script> -->
-
-    <!--------------------------------------------------------------------->
-    <!-- Make calls to your own JavaScript functions, here below-->
+    <script src=scripts/create_event.js> </script>
+        <!--------------------------------------------------------------------->
+        <!-- Make calls to your own JavaScript functions, here below
+        -->
     <!---------------------------------------------------------------------->
 
 </body>
