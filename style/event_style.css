@@ -23,3 +23,8 @@ div.event-info {
     padding: 20px;
     border: 1px solid;
 }
+
+#members {
+    text-align: left;
+    padding: 50px;
+}

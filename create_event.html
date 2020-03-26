@@ -73,23 +73,23 @@
             <form class="needs-validation" novalidate>
                 <div class="form-group">
                     <label for="inputEventName">Event Name</label>
-                    <input type="eventName" class="form-control" id="inputEventName" placeholder="Event Name" required>
+                    <input type="eventName" class="form-control" maxlength="50" id="inputEventName" placeholder="Event Name" required>
                     <div class="invalid-feedback">Please enter an event name.</div>
                 </div>
                 <div class="form-group">
                     <label for="inputEventDescription">Event Description</label>
-                    <textarea type="description" class="form-control" id="inputEventDescription"
+                    <textarea type="description" class="form-control" maxlength = "150" id="inputEventDescription"
                         placeholder="Description" required cols="30" rows="5"></textarea>
                     <div class="invalid-feedback">Please enter a description.</div>
                 </div>
                 <div class="form-group">
                     <label for="inputEventDate">Date</label>
-                    <input type="eventDate" class="form-control" id="inputEventDate" placeholder="Date" required>
+                    <input type="eventDate" class="form-control" maxlength="10" id="inputEventDate" placeholder="MM/DD/YYYY" required>
                     <div class="invalid-feedback">Please enter a date.</div>
                 </div>
                 <div class="form-group">
                     <label for="inputEventTime">Time</label>
-                    <input type="eventTime" class="form-control" id="inputEventTime" placeholder="Time" required>
+                    <input type="eventTime" class="form-control" maxlength="5" id="inputEventTime" placeholder="HH:MM" required>
                     <div class="invalid-feedback">Please enter a time.</div>
                 </div>
                 <div class="input-group">
@@ -105,10 +105,10 @@
                 <div class="form-group">
                     <label for="tags">Tag</label>
                     <select class="form-control" id="tags">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
+                        <option id="tag1">1</option>
+                        <option id="tag2">2</option>
+                        <option id="tag3">3</option>
+                        <option id="tag4">4</option>
                     </select>
                 </div>
                 <div>
