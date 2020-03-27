@@ -16,7 +16,8 @@ function writeEventInfo() {
                 Description: eventName,
                 Name: eventDescrip,
                 Date: eventDate,
-                Time: eventTime
+                Time: eventTime,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
             })
     })
 }
