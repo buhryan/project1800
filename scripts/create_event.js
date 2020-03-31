@@ -13,11 +13,11 @@ function writeEventInfo() {
         console.log(eventTime);
     
         db.collection("events").add({
-                Description: eventName,
-                Name: eventDescrip,
-                Date: eventDate,
-                Time: eventTime,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            Name: eventName,
+            Description: eventDescrip,
+            Date: eventDate,
+            Time: eventTime,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
             })
     })
 }
