@@ -22,8 +22,10 @@
 //         })
 // }
 
+//an array to store database document names
 let eventList = [];
 
+//puts event document names in an array ordered by timestamp
 function getEvent() {
     db.collection("events")
         .orderBy("timestamp")
@@ -39,6 +41,7 @@ function displayEvent() {
 
 }
 
+//Dynamically dets the events and links in the search.HTML file
 getEvent();
 setTimeout(function () {
     let x = 0;
@@ -73,50 +76,63 @@ setTimeout(function () {
 
     }}, 2000);
 
+//filters by events with the Game tag
 function gameTag(){
     document.getElementById("games").addEventListener("click", function(e) {
         e.preventDefault();
 
+        resetTags()
         console.log("clicked");
+        document.getElementById("Games").style = "display:block"
         document.getElementById("Study").style = "display:none";
         document.getElementById("Food and Beverage").style = "display:none";
         document.getElementById("Intramurals").style = "display:none";
+
     })
 }
 
+//filters by events with the Study tag
 function studyTag() {
     document.getElementById("study").addEventListener("click", function(e) {
         e.preventDefault();
-
+        resetTags()
         console.log("clicked");
+        document.getElementById("Study").style = "display:block"
         document.getElementById("Games").style = "display:none";
         document.getElementById("Food and Beverage").style = "display:none";
         document.getElementById("Intramurals").style = "display:none";
+
     })
 }
 
+//filters by events with the Food and Beverage tag
 function fbTag() {
     document.getElementById("fb").addEventListener("click", function(e) {
         e.preventDefault();
 
+        resetTags()
         console.log("clicked");
+        document.getElementById("Food and Beverage").style = "display:block"
         document.getElementById("Study").style = "display:none";
         document.getElementById("Games").style = "display:none";
         document.getElementById("Intramurals").style = "display:none";
     })
 }
 
+//filters by events with the Intramurals tag
 function intramuralTag() {
     document.getElementById("intramurals").addEventListener("click", function(e) {
         e.preventDefault();
 
         console.log("clicked");
+        document.getElementById("Intramurals").style = "display:block"
         document.getElementById("Study").style = "display:none";
         document.getElementById("Food and Beverage").style = "display:none";
         document.getElementById("Games").style = "display:none";
     })
 }
 
+//Makes all tags visible
 function resetTags() {
     document.getElementById("reset").addEventListener("click", function(e) {
         e.preventDefault();
@@ -130,9 +146,12 @@ function resetTags() {
     })
 }
 
-
+function pageLoad() {
 gameTag();
 intramuralTag();
 fbTag();
 studyTag();
 resetTags();
+}
+
+pageLoad();
