@@ -73,24 +73,38 @@
             <form class="needs-validation" novalidate>
                 <div class="form-group">
                     <label for="inputEventName">Event Name</label>
-                    <input type="eventName" class="form-control" maxlength="50" id="inputEventName" placeholder="Event Name" required>
+                    <input type="eventName" size="10" class="form-control" maxlength="50" id="inputEventName"
+                        placeholder="Event Name" required>
                     <div class="invalid-feedback">Please enter an event name.</div>
                 </div>
                 <div class="form-group">
                     <label for="inputEventDescription">Event Description</label>
-                    <textarea type="description" class="form-control" maxlength = "150" id="inputEventDescription"
+                    <textarea type="description" class="form-control" maxlength="150" id="inputEventDescription"
                         placeholder="Description" required cols="30" rows="5"></textarea>
                     <div class="invalid-feedback">Please enter a description.</div>
                 </div>
                 <div class="form-group">
+                    <label for="inputEventLocation">Location</label>
+                    <input type="eventLocation" size="10" class="form-control" maxlength="50" id="inputEventLocation"
+                        placeholder="Location" required>
+                    <div class="invalid-feedback">Please enter a location.</div>
+                </div>
+                <div class="form-group">
                     <label for="inputEventDate">Date</label>
-                    <input type="date" class="form-control" maxlength="10" id="inputEventDate" placeholder="MM/DD/YYYY" required>
+                    <input type="date" class="form-control" maxlength="10" id="inputEventDate" placeholder="MM/DD/YYYY"
+                        required>
                     <div class="invalid-feedback">Please enter a date.</div>
                 </div>
                 <div class="form-group">
                     <label for="inputEventTime">Time</label>
-                    <input type="time" class="form-control" maxlength="5" id="inputEventTime" placeholder="HH:MM" required>
+                    <input type="time" class="form-control" maxlength="5" id="inputEventTime" placeholder="HH:MM"
+                        required>
                     <div class="invalid-feedback">Please enter a time.</div>
+                </div>
+                <div class="form-group">
+                    <label for="inputMemberMax">Number of Members</label>
+                    <input type="number" size="2" class="form-control" id="inputMemberMax" required>
+                    <div class="invalid-feedback">Please enter a number.</div>
                 </div>
                 <div class="input-group">
                     <div class="input-group-prepend">
