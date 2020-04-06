@@ -1,5 +1,5 @@
 function writeEventInfo() {
-    document.getElementById("eventForm").addEventListener("submit", function(e) {
+    document.getElementById("eventForm").addEventListener("submit", function (e) {
 
         e.preventDefault();
         let eventName = document.getElementById("inputEventName").value;
@@ -11,7 +11,7 @@ function writeEventInfo() {
         let eventTag = document.getElementById("tags").value;
         let user = firebase.auth().currentUser.displayName;
         let memberList = [user];
-        
+
         console.log(eventName);
         console.log(eventDescrip);
         console.log(eventLocation);
@@ -20,7 +20,7 @@ function writeEventInfo() {
         console.log(eventMembersMax);
         console.log(eventTag);
         console.log(user);
-    
+
         db.collection("events").add({
             Name: eventName,
             Description: eventDescrip,
@@ -31,8 +31,16 @@ function writeEventInfo() {
             MembersMax: eventMembersMax,
             Tag: eventTag,
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            })
+        })
     })
+
+    // Event creation confirmed
+    $('form').on('submit', function () {
+        alert('Event Created');
+    });
+
+    // Clears input forms
+    document.getElementById("eventForm").reset();
 }
 
 writeEventInfo();

@@ -42,7 +42,7 @@ function joinEvent() {
   let document = db.collection("events").doc(docReference.toString());
 
   if (!memberArr.includes(user) &&
-    memberArr.length >= maxMembers) {
+    memberArr.length < maxMembers) {
     document.update({
       Members: firebase.firestore.FieldValue.arrayUnion(user)
     });
