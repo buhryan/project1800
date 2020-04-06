@@ -1,6 +1,7 @@
 let docReference = localStorage.getItem("event");
 let joinButton = document.getElementById("joinButton");
 let memberList = document.getElementById("event-memberList");
+let maxMembers;
 let memberArr;
 
 function getEvent() {
@@ -16,6 +17,8 @@ function getEvent() {
         document.getElementById("event-time").innerHTML = doc.data().Date + "@" + doc.data().Time;
         document.getElementById("event-location").innerHTML = doc.data().Location;
         document.getElementById("event-description").innerHTML = doc.data().Description;
+        document.getElementById("event-tag").innerHTML = doc.data().Tag;
+        maxMembers = doc.data().MembersMax;
         memberArr = doc.data().Members;
         for (let i = 0; i < memberArr.length; i++) {
           let member = document.createElement("li");
@@ -38,7 +41,8 @@ function joinEvent() {
   let user = firebase.auth().currentUser.displayName;
   let document = db.collection("events").doc(docReference.toString());
 
-  if (!memberArr.includes(user)) {
+  if (!memberArr.includes(user) &&
+    memberArr.length >= maxMembers) {
     document.update({
       Members: firebase.firestore.FieldValue.arrayUnion(user)
     });
@@ -48,6 +52,7 @@ function joinEvent() {
     getEvent();
   } else {
     console.log("Already joined the event!");
+    joinButton.disabled = true;
   }
 }
 

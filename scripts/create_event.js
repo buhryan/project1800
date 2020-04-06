@@ -7,6 +7,7 @@ function writeEventInfo() {
         let eventLocation = document.getElementById("inputEventLocation").value;
         let eventDate = document.getElementById("inputEventDate").value;
         let eventTime = document.getElementById("inputEventTime").value;
+        let eventMembersMax = document.getElementById("inputMemberMax").value;
         let eventTag = document.getElementById("tags").value;
         let user = firebase.auth().currentUser.displayName;
         let memberList = [user];
@@ -16,6 +17,7 @@ function writeEventInfo() {
         console.log(eventLocation);
         console.log(eventDate);
         console.log(eventTime);
+        console.log(eventMembersMax);
         console.log(eventTag);
         console.log(user);
     
@@ -26,6 +28,7 @@ function writeEventInfo() {
             Members: memberList,
             Date: eventDate,
             Time: eventTime,
+            MembersMax: eventMembersMax,
             Tag: eventTag,
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
             })
