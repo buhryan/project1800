@@ -45,7 +45,7 @@ function displayEvent() {
 getEvent();
 setTimeout(function () {
     let x = 0;
-    for (let i = eventList.length - 1; i > eventList.length -7; i--) {
+    for (let i = eventList.length - 1; i > eventList.length -13; i--) {
     db.collection("events")
         .doc("" + eventList[i])
         .get()
@@ -81,9 +81,9 @@ function gameTag(){
     document.getElementById("games").addEventListener("click", function(e) {
         e.preventDefault();
 
-        resetTags()
+        resetTags();
         console.log("clicked");
-        document.getElementById("Games").style = "display:block"
+        document.getElementById("Games").style = "display:block";
         document.getElementById("Study").style = "display:none";
         document.getElementById("Food and Beverage").style = "display:none";
         document.getElementById("Intramurals").style = "display:none";
@@ -95,9 +95,9 @@ function gameTag(){
 function studyTag() {
     document.getElementById("study").addEventListener("click", function(e) {
         e.preventDefault();
-        resetTags()
+        resetTags();
         console.log("clicked");
-        document.getElementById("Study").style = "display:block"
+        document.getElementById("Study").style = "display:block";
         document.getElementById("Games").style = "display:none";
         document.getElementById("Food and Beverage").style = "display:none";
         document.getElementById("Intramurals").style = "display:none";
@@ -110,9 +110,9 @@ function fbTag() {
     document.getElementById("fb").addEventListener("click", function(e) {
         e.preventDefault();
 
-        resetTags()
+        resetTags();
         console.log("clicked");
-        document.getElementById("Food and Beverage").style = "display:block"
+        document.getElementById("Food and Beverage").style = "display:block";
         document.getElementById("Study").style = "display:none";
         document.getElementById("Games").style = "display:none";
         document.getElementById("Intramurals").style = "display:none";
@@ -125,7 +125,7 @@ function intramuralTag() {
         e.preventDefault();
 
         console.log("clicked");
-        document.getElementById("Intramurals").style = "display:block"
+        document.getElementById("Intramurals").style = "display:block";
         document.getElementById("Study").style = "display:none";
         document.getElementById("Food and Beverage").style = "display:none";
         document.getElementById("Games").style = "display:none";
