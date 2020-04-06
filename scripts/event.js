@@ -52,5 +52,4 @@ function joinEvent() {
 }
 
 getEvent();
-
 joinButton.onclick = joinEvent;

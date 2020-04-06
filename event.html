@@ -88,13 +88,26 @@
       <ul id="event-memberList"></ul>
     </div>
 
-    <!-- Footer bar -->
-    <nav class="navbar fixed-bottom navbar-center navbar-expand-sm navbar-dark bg-dark">
-      <button class="btn btn-outline-light" type="button">Smaller button</button>
-        <button class="btn btn-outline-light" type="button">Smaller button</button>
-        <button class="btn btn-outline-light" type="button">Smaller button</button>
-        <button class="btn btn-outline-light ml-auto" type="button" id="joinButton">Join</button>
-        </div>
+
+      <!-- Footer Nav Bar-->
+      <div>
+        <nav class="navbar fixed-bottom navbar-center navbar-expand-sm navbar-dark bg-dark textcenter">
+          <div id="parentButtonDiv">
+            <div id="buttonDiv">
+              <a href="main.html">
+                <button class="btn btn-outline-light" type="button" style="width: 23vw" id="homeButton">Home</button>
+              </a>
+              <a href="profile.html">
+                <button class="btn btn-outline-light" type="button" style="width: 23vw" eventButton">My Events</button>
+              </a>
+              <a href="search.html">
+                <button class="btn btn-outline-light" type="button" style="width: 23vw" id="discoverButton">Discover</button>
+              </a>
+              <button class="btn btn-outline-light ml-auto" type="button" style="width:23vw" id="joinButton">Join</button>
+            </div>
+          </div>
+        </nav>
+      </div>
     </nav>
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
