@@ -98,7 +98,8 @@ setTimeout(function () {
                     console.log(elementValue);
                     localStorage.setItem("event", elementValue);
                 }
-            }           x++;
+            }           
+            x++;
      
 
         }).catch(function (error) {

@@ -88,45 +88,58 @@
     <ul id="event-memberList"></ul>
   </div>
 
-  <!-- Footer bar -->
-  <nav class="navbar fixed-bottom navbar-center navbar-expand-sm navbar-dark bg-dark">
-    <button class="btn btn-outline-light" type="button">Smaller button</button>
-    <button class="btn btn-outline-light" type="button">Smaller button</button>
-    <button class="btn btn-outline-light" type="button">Smaller button</button>
-    <button class="btn btn-outline-light ml-auto" type="button" id="joinButton">Join</button>
-    </div>
-  </nav>
-  <!----------------------------------------------->
-  <!-- JS: Boostrap, Firebase, API related    -->
-  <!----------------------------------------------->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
 
-  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
-  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-  <script src="scripts/firebase_api_chris.js"></script>
+      <!-- Footer Nav Bar-->
+      <div>
+        <nav class="navbar fixed-bottom navbar-center navbar-expand-sm navbar-dark bg-dark textcenter">
+          <div id="parentButtonDiv">
+            <div id="buttonDiv">
+              <a href="main.html">
+                <button class="btn btn-outline-light" type="button" style="width: 23vw" id="homeButton">Home</button>
+              </a>
+              <a href="profile.html">
+                <button class="btn btn-outline-light" type="button" style="width: 23vw" eventButton">My Events</button>
+              </a>
+              <a href="search.html">
+                <button class="btn btn-outline-light" type="button" style="width: 23vw" id="discoverButton">Discover</button>
+              </a>
+              <button class="btn btn-outline-light ml-auto" type="button" style="width:23vw" id="joinButton">Join</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </nav>
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="scripts/firebase_api_chris.js"></script>
 
 
-  <!-- <script src="scripts/firebase_api_carly.js"> </script> -->
+    <!-- <script src="scripts/firebase_api_carly.js"> </script> -->
 
-  <!--------------------------------------------------------------------->
-  <!-- JS files: Your own JavaScript functions included here    -->
-  <!--------------------------------------------------------------------->
-  <!-- <script src="scripts/script.js"></script> -->
-  <script src="scripts/event.js"></script>
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+    <!-- <script src="scripts/script.js"></script> -->
+    <script src="scripts/event.js"></script>
 
-  <!--------------------------------------------------------------------->
-  <!-- Make calls to your own JavaScript functions, here below-->
-  <!---------------------------------------------------------------------->
+    <!--------------------------------------------------------------------->
+    <!-- Make calls to your own JavaScript functions, here below-->
+    <!---------------------------------------------------------------------->
 
 
 </body>
