@@ -4,6 +4,7 @@ let memberList = document.getElementById("event-memberList");
 let maxMembers;
 let memberArr;
 
+// Sets HTML elements to the linked event
 function getEvent() {
 
   console.log(localStorage.getItem("event"));
@@ -38,6 +39,7 @@ function getEvent() {
     }))
 }
 
+// Adds user to event
 function joinEvent() {
   let user = firebase.auth().currentUser.displayName;
   let document = db.collection("events").doc(docReference.toString());

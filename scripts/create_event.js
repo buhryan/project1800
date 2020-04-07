@@ -14,17 +14,6 @@ function writeEventInfo() {
         let user = firebase.auth().currentUser.displayName;
         let memberList = [user];
 
-        console.log(eventName);
-        console.log(eventDescrip);
-        console.log(eventLocation);
-        console.log(eventDate);
-        console.log(eventTime);
-        console.log(eventMembersMax);
-        console.log(eventTag);
-        console.log(eventPicture);
-        console.log(memberList);
-
-
         db.collection("events").add({
             Name: eventName,
             Description: eventDescrip,
