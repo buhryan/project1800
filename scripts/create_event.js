@@ -1,3 +1,4 @@
+// Writes the event information to the database
 function writeEventInfo() {
     document.getElementById("eventForm").addEventListener("submit", function (e) {
 
@@ -12,15 +13,6 @@ function writeEventInfo() {
         let user = firebase.auth().currentUser.displayName;
         let memberList = [user];
 
-        console.log(eventName);
-        console.log(eventDescrip);
-        console.log(eventLocation);
-        console.log(eventDate);
-        console.log(eventTime);
-        console.log(eventMembersMax);
-        console.log(eventTag);
-        console.log(user);
-
         db.collection("events").add({
             Name: eventName,
             Description: eventDescrip,
@@ -34,12 +26,20 @@ function writeEventInfo() {
         })
     })
 
-    // Event creation confirmed
+    eventConfirmation();
+
+    clearForms();
+}
+
+// Confirms that the event has been created
+function eventConfirmation() {
     $('form').on('submit', function () {
         alert('Event Created');
     });
+}
 
-    // Clears input forms
+// Clears the inputs in the forms
+function clearForms() {
     document.getElementById("eventForm").reset();
 }
 
