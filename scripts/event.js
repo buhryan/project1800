@@ -18,6 +18,7 @@ function getEvent() {
         document.getElementById("event-location").innerHTML = doc.data().Location;
         document.getElementById("event-description").innerHTML = doc.data().Description;
         document.getElementById("event-tag").innerHTML = doc.data().Tag;
+        document.getElementById("event-banner").style.backgroundImage = "url('images/" + doc.data().Picture + "')";
         maxMembers = doc.data().MembersMax;
         memberArr = doc.data().Members;
         for (let i = 0; i < memberArr.length; i++) {

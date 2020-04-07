@@ -3,7 +3,7 @@ html {
     height: 100%;
 }
 
-.hero-image {
+#event-banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/shop.jpg");
     height: 20%;
     background-position: center;
