@@ -55,7 +55,7 @@
             <a class="nav-link" href="search.html">Discover</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Profile.html">Profile</a>
+            <a class="nav-link" href="profile.html">My Events</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="create_event.html">New Event<span class="sr-only">(current)</span></a>
@@ -70,22 +70,18 @@
   </div>
   <div class="event-info">
     <div id="event-title">
-      <h1 id="event-name">Event Name</h1>
-      <p id="event-time">MM/DD/YYYY @ HH:MM</p>
-      <p id="event-location">default location</p>
+      <h1 id="event-name">Loading</h1>
+      <p id="event-time"></p>
+      <p id="event-location"></p>
     </div>
     <div id="event-description">
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum."</p>
+      <p></p>
     </div>
     <div id="event-tag">
     </div>
   </div>
   <div id="members">
-    <h4>Members</h4>
+    <h4 id="member-title">Members</h4>
     <ul id="event-memberList"></ul>
   </div>
 
@@ -99,7 +95,7 @@
                 <button class="btn btn-outline-light" type="button" style="width: 18vw" id="homeButton">Home</button>
               </a>
               <a href="profile.html">
-                <button class="btn btn-outline-light" type="button" style="width: 28vw" eventButton">My Events</button>
+                <button class="btn btn-outline-light" type="button" style="width: 28vw" id="eventButton">My Events</button>
               </a>
               <a href="search.html">
                 <button class="btn btn-outline-light" type="button" style="width: 22vw" id="discoverButton">Discover</button>

@@ -22,6 +22,7 @@ function getEvent() {
         document.getElementById("event-banner").style.backgroundImage = "url('images/" + doc.data().Picture + "')";
         maxMembers = doc.data().MembersMax;
         memberArr = doc.data().Members;
+        document.getElementById("member-title").innerHTML = "Members " + memberArr.length + "/" + maxMembers;
         for (let i = 0; i < memberArr.length; i++) {
           let member = document.createElement("li");
           member.textContent = memberArr[i];
@@ -53,10 +54,20 @@ function joinEvent() {
       memberList.removeChild(memberList.firstChild);
     }
     getEvent();
+    joinConfirmation();
   } else {
-    console.log("Already joined the event!");
+    alreadyJoinedAlert();
+    console.log("already joined");
     joinButton.disabled = true;
   }
+}
+
+function joinConfirmation() {
+  window.alert('Succesfully joined the event!');
+}
+
+function alreadyJoinedAlert() {
+    window.alert('Already joined the event!');
 }
 
 getEvent();

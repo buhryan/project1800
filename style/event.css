@@ -4,7 +4,6 @@ html {
 }
 
 #event-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/shop.jpg");
     height: 20%;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,4 +26,8 @@ div.event-info {
 #members {
     text-align: left;
     padding: 50px;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(255,255,255,.8);
 }

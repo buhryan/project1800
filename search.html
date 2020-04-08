@@ -1,308 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>My BCIT Project</title>
-    <meta name="comp1800 boilerplate code" content="my bcit project">
-    <meta name="Bryan Xing and Christopher Spooner" content="BCIT">
-    <link rel="icon" href="images/logo.png">
 
-    <!----------------------------------------------->
-    <!--  Meta tag for rendering on mobile devices -->
-    <!----------------------------------------------->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!----------------------------------------------->
-    <!-- CSS: Bootstrap, Firebase, other API -->
-    <!----------------------------------------------->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-   
-    <!------------------------>
-    <!-- Your own CSS files -->
-    <!------------------------>
-    <link rel="stylesheet" href="styles/style.css">
+<head>
+  <meta charset="utf-8">
+  <title>My BCIT Project</title>
+  <meta name="comp1800 boilerplate code" content="my bcit project">
+  <meta name="Bryan Xing and Christopher Spooner" content="BCIT">
+  <link rel="icon" href="images/logo.png">
+
+  <!----------------------------------------------->
+  <!--  Meta tag for rendering on mobile devices -->
+  <!----------------------------------------------->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!----------------------------------------------->
+  <!-- CSS: Bootstrap, Firebase, other API -->
+  <!----------------------------------------------->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+  <!------------------------>
+  <!-- Your own CSS files -->
+  <!------------------------>
+  <link rel="stylesheet" href="styles/style.css">
 
 </head>
+
 <body>
-    <!----------------------->
-    <!--  HTML Section -->
-    <!----------------------->
+  <!----------------------->
+  <!--  HTML Section -->
+  <!----------------------->
 
-    <!--Navbar-->
-    <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <h5 class="text-white h4">Cohort Connect</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
-          </div>
-        </div>
-        <nav class="navbar fixed-top navbar-dark bg-dark">
-            <a class="navbar-brand" href="main.html">Cohort Connect</a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbarsExample01">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                  <a class="nav-link" href="main.html">Home</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link disabled" href="search.html">Discover</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Profile.html">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="create_event.html">New Event<span class="sr-only">(current)</span></a>
-                  </li>
-              </ul>
-            </div>
-          </button>
-        </nav>
+  <!--Navbar-->
+  <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        <h5 class="text-white h4">Cohort Connect</h5>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
     </div>
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+      <a class="navbar-brand" href="main.html">Cohort Connect</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01"
+        aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarsExample01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="main.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link disabled" href="search.html">Discover</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">My Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="create_event.html">New Event<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+      </button>
+    </nav>
+  </div>
 
-    
-    <!--Title-->
-    <br><br><br>
-    <div style="text-align: center;">
-      <button id="games">Games</button>
-      <button id="study">Study</button>
-      <button id="intramurals">Intramurals</button>
-      <button id="fb">Food and Beverage</button>
-      <button id="reset">Reset Tags</button>
 
-    
-    </div>
+  <!--Title-->
+  <br><br><br>
+  <div style="text-align: center;">
+    <button id="games">Games</button>
+    <button id="study">Study</button>
+    <button id="intramurals">Intramurals</button>
+    <button id="fb">Food and Beverage</button>
+    <button id="reset">Reset Tags</button>
 
-    <div class="container" id="body">
-      <h1 class="mt-5">New Events</h1>
-      <div class="container">   
-          <div class="row">
-          <div class="col-md-6" id="tag0">
-            <a id= "event0">
+
+  </div>
+
+  <div class="container" id="body">
+    <h1 class="mt-5">New Events</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" id="tag0">
+          <a id="event0">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title class="title1">Placeholder</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%" id="title0">Loading</text></svg>
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title class="title1"></title>
+                <rect fill="#004c6d" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%"
+                  id="title0">Loading</text>
+              </svg>
               <div class="card-body">
                 <p class="card-text" id="desc0"></p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted" id="event-time0">9 mins</small>
+                  <small class="text-muted" id="event-time0"></small>
                 </div>
               </div>
             </div>
-        </a>
+          </a>
         </div>
-          <div class="col-md-6" id="tag1">
-            <a id= "event1">
+        <div class="col-md-6" id="tag1">
+          <a id="event1">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title class="title1">Placeholder</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%" id="title1">Loading</text></svg>
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title class="title1"></title>
+                <rect fill="#004c6d" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%"
+                  id="title1">Loading</text>
+              </svg>
               <div class="card-body">
-                <p class="card-text" id="desc1">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text" id="desc1"></p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted" id="event-time1">9 mins</small>
+                  <small class="text-muted" id="event-time1"></small>
                 </div>
               </div>
             </div>
           </a>
 
-          </div>
+        </div>
 
-          <div class="col-md-6" id="tag2">
-            <a id= "event2">
+        <div class="col-md-6" id="tag2">
+          <a id="event2">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title class="title2">Placeholder</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%" id="title2">Loading</text></svg>
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title class="title2"></title>
+                <rect fill="#004c6d" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%"
+                  id="title2">Loading</text>
+              </svg>
               <div class="card-body">
-                <p class="card-text" id="desc2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text" id="desc2"></p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted" id="event-time2">9 mins</small>
+                  <small class="text-muted" id="event-time2"></small>
                 </div>
               </div>
             </div>
-            </a>
-          </div>
+          </a>
+        </div>
 
-          <div class="col-md-6" id="tag3">
-            <a id= "event3">
+        <div class="col-md-6" id="tag3">
+          <a id="event3">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title class="title2">Placeholder</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%" id="title3">Loading</text></svg>
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title class="title2"></title>
+                <rect fill="#004c6d" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%"
+                  id="title3">Loading</text>
+              </svg>
               <div class="card-body">
-                <p class="card-text" id="desc3">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text" id="desc3"></p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted" id="event-time3">9 mins</small>
+                  <small class="text-muted" id="event-time3"></small>
                 </div>
               </div>
             </div>
-            </a>
-          </div>
+          </a>
+        </div>
 
 
-          <div class="col-md-6" id="tag4">
-            <a id= "event4">
+        <div class="col-md-6" id="tag4">
+          <a id="event4">
 
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title class="title4">Placeholder</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%" id="title4">Loading</text></svg>
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title class="title4"></title>
+                <rect fill="#004c6d" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%"
+                  id="title4">Loading</text>
+              </svg>
               <div class="card-body">
-                <p class="card-text" id="desc4">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text" id="desc4"></p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted" id="event-time4">9 mins</small>
+                  <small class="text-muted" id="event-time4"></small>
                 </div>
               </div>
             </div>
-            </a>
-          </div>
-          <div class="col-md-6" id="tag5">
-            <a id= "event5">
+          </a>
+        </div>
+        <div class="col-md-6" id="tag5">
+          <a id="event5">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title class="title5">Placeholder</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%" id="title5" >Loading</text></svg>
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title class="title5"></title>
+                <rect fill="#004c6d" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%"
+                  id="title5">Loading</text>
+              </svg>
               <div class="card-body">
-                <p class="card-text" id="desc5">old desc</p>
+                <p class="card-text" id="desc5"></p>
                 <div class="d-flex justify-content-between align-items-center">
 
-                  <small class="text-muted" id="event-time5">9 mins</small>
+                  <small class="text-muted" id="event-time5"></small>
                 </div>
               </div>
             </div>
-            </a>
-          </div>
-          <div class="col-md-6" id="tag6">
-            <a id= "event6">
+          </a>
+        </div>
+        <div class="col-md-6" id="tag6">
+          <a id="event6">
 
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title class="title6">Placeholder</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%" id="title6">Loading</text></svg>
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title class="title6"></title>
+                <rect fill="#004c6d" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%"
+                  id="title6">Loading</text>
+              </svg>
               <div class="card-body">
-                <p class="card-text" id="desc6">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text" id="desc6"></p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted" id="event-time6">9 mins</small>
+                  <small class="text-muted" id="event-time6"></small>
                 </div>
               </div>
             </div>
-            </a>
-          </div>
-          <div class="col-md-6" id="tag7">
-            <a id= "event7">
+          </a>
+        </div>
+        <div class="col-md-6" id="tag7">
+          <a id="event7">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title class="title5">Placeholder</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%" id="title7" >Loading</text></svg>
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title class="title5"></title>
+                <rect fill="#004c6d" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%"
+                  id="title7">Loading</text>
+              </svg>
               <div class="card-body">
-                <p class="card-text" id="desc7">old desc</p>
+                <p class="card-text" id="desc7"></p>
                 <div class="d-flex justify-content-between align-items-center">
 
-                  <small class="text-muted" id="event-time7">9 mins</small>
+                  <small class="text-muted" id="event-time7"></small>
                 </div>
               </div>
             </div>
-            </a>
-          </div>
-          <div class="col-md-6" id="tag8">
-            <a id= "event8">
+          </a>
+        </div>
+        <div class="col-md-6" id="tag8">
+          <a id="event8">
 
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title class="title8">Placeholder</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%" id="title8">Loading</text></svg>
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                <title class="title8"></title>
+                <rect fill="#004c6d" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%"
+                  id="title8">Loading</text>
+              </svg>
               <div class="card-body">
-                <p class="card-text" id="desc8">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text" id="desc8"></p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted" id="event-time8">9 mins</small>
+                  <small class="text-muted" id="event-time8"></small>
                 </div>
               </div>
             </div>
-            </a>
-          </div>
-          <div class="col-md-6" id="tag9">
-            <a id= "event9">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title class="title9">Placeholder</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%" id="title9" >Loading</text></svg>
-              <div class="card-body">
-                <p class="card-text" id="desc9">old desc</p>
-                <div class="d-flex justify-content-between align-items-center">
-
-                  <small class="text-muted" id="event-time9">9 mins</small>
-                </div>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="col-md-6" id="tag10">
-            <a id= "event10">
-
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title class="title10">Placeholder</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%" id="title10">Loading</text></svg>
-              <div class="card-body">
-                <p class="card-text" id="desc10">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted" id="event-time10">9 mins</small>
-                </div>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="col-md-6" id="tag11">
-            <a id= "event11">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title class="title10">Placeholder</title><rect fill="#55595c" width="100%" height="100%"></rect><text fill="#eceeef" dy=".3em" x="50%" y="50%" id="title11" >Loading</text></svg>
-              <div class="card-body">
-                <p class="card-text" id="desc10">old desc</p>
-                <div class="d-flex justify-content-between align-items-center">
-
-                  <small class="text-muted" id="event-tim11">9 mins</small>
-                </div>
-              </div>
-            </div>
-            </a>
-          </div>
+          </a>
+        </div>
 
 
-          </div>
       </div>
+    </div>
+  </div>
+
+
+  <!-- Footer Nav Bar-->
+  <div>
+    <nav class="navbar fixed-bottom navbar-center navbar-expand-sm navbar-dark bg-dark textcenter">
+      <div id="parentButtonDiv">
+        <div id="buttonDiv">
+          <a href="main.html">
+            <button class="btn btn-outline-light" type="button" style="width: 29vw" id="homeButton">Home</button>
+          </a>
+          <a href="profile.html">
+            <button class="btn btn-outline-light" type="button" style="width: 29vw" id="eventButton">My Events</button>
+          </a>
+          <a href="search.html">
+            <button class="btn btn-outline-light" type="button" style="width: 29vw"
+              id="discoverButton">Discover</button>
+          </a>
+        </div>
       </div>
-  
+    </nav>
+  </div>
 
-      <!-- Footer Nav Bar-->
-      <div>
-        <nav class="navbar fixed-bottom navbar-center navbar-expand-sm navbar-dark bg-dark textcenter">
-          <div id="parentButtonDiv">
-            <div id="buttonDiv">
-              <a href="main.html">
-                <button class="btn btn-outline-light" type="button" style="width: 29vw" id="homeButton">Home</button>
-              </a>
-              <a href="profile.html">
-                <button class="btn btn-outline-light" type="button" style="width: 29vw" eventButton">My Events</button>
-              </a>
-              <a href="search.html">
-                <button class="btn btn-outline-light" type="button" style="width: 29vw" id="discoverButton">Discover</button>
-              </a>
-            </div>
-          </div>
-        </nav>
-      </div>
+  <!----------------------------------------------->
+  <!-- JS: Boostrap, Firebase, API related    -->
+  <!----------------------------------------------->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
 
-    <!----------------------------------------------->
-    <!-- JS: Boostrap, Firebase, API related    -->
-    <!----------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <script src="scripts/firebase_api_chris.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src="scripts/firebase_api_chris.js"></script>
-  
-    <!--------------------------------------------------------------------->
-    <!-- JS files: Your own JavaScript functions included here    -->
-    <!--------------------------------------------------------------------->
-    <script src="scripts/search.js"></script>
+  <!--------------------------------------------------------------------->
+  <!-- JS files: Your own JavaScript functions included here    -->
+  <!--------------------------------------------------------------------->
+  <script src="scripts/search.js"></script>
 
-     <!--------------------------------------------------------------------->
-    <!-- Make calls to your own JavaScript functions, here below-->
-    <!---------------------------------------------------------------------->
+  <!--------------------------------------------------------------------->
+  <!-- Make calls to your own JavaScript functions, here below-->
+  <!---------------------------------------------------------------------->
 
 
 </body>
-</html>   
-                         
+
+</html>
