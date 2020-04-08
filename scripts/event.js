@@ -54,21 +54,16 @@ function joinEvent() {
       memberList.removeChild(memberList.firstChild);
     }
     getEvent();
-    joinConfirmation();
+    window.alert('Succesfully joined the event!');
+  } else if (memberArr.length == maxMembers) {
+    window.alert("Event is full!");
   } else {
-    alreadyJoinedAlert();
-    console.log("already joined");
-    joinButton.disabled = true;
-  }
-}
-
-function joinConfirmation() {
-  window.alert('Succesfully joined the event!');
-}
-
-function alreadyJoinedAlert() {
     window.alert('Already joined the event!');
+  }
+  joinButton.disabled = true;
 }
+
+
 
 getEvent();
 joinButton.onclick = joinEvent;
