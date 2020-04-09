@@ -55,7 +55,7 @@ function joinEvent() {
     }
     getEvent();
     window.alert('Succesfully joined the event!');
-    //Stops the user from joining the event if it is full or if the user has joined the event
+  //Stops the user from joining the event if it is full or if the user has joined the event
   } else if (memberArr.length == maxMembers) {
     window.alert("Event is full!");
   } else {
