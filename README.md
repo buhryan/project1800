@@ -5,7 +5,7 @@
 
 ## General Info
 This browser based web application hosts events for users to join and create.
-First the user must login.  Then they can view the newest events, joing any events, search for events by tags, and see a list of the events that they have joined.
+First the user must login.  Then they can view the newest events, join any events, search for events by tags, and see a list of the events that they have joined.
 Users must login to use the site, some features may be viewable without logging in the future. (in construction).
 
 This small project demonstrates:
@@ -35,11 +35,11 @@ Content of the project folder:
 ├── .gitignore               # Git ignore file
 ├── 404.html                 # File for error
 ├── Profile.html             # page shows events the user has joined
+├── README.md 
 ├── create_event.html        # page allows users to create an event
 ├── event.html               # page for each event create, reads from firebase
 ├── login.html               # landing HTML file, login HTML file, contains logic for user authentication this is what users see when you come to url. Users must be logged in the use the site
-├── main.html                # after logged in, you can view the newest events here
-├── README.md               
+├── main.html                # after logged in, you can view the newest events here              
 └── search.html              # page shows event sorted by their tags
 
 It has the following subfolders:
