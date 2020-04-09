@@ -4,15 +4,14 @@ let memberList = document.getElementById("event-memberList");
 let maxMembers;
 let memberArr;
 
-// Sets HTML elements to the linked event
+/* Sets HTML elements to the linked event using a local Storage variable 
+  which contains the docID of the event that will be loaded*/
 function getEvent() {
-
-  console.log(localStorage.getItem("event"));
-
-  console.log(db.collection("events")
+  db.collection("events")
     .doc(docReference.toString())
     .get()
     .then(function (doc) {
+      //Sets the innerHTML and styling of the page based on the event document from the DB
       if (doc.exists) {
         document.getElementById("event-name").innerHTML = doc.data().Name;
         document.getElementById("event-time").innerHTML = doc.data().Date + "@" + doc.data().Time;
@@ -23,6 +22,7 @@ function getEvent() {
         maxMembers = doc.data().MembersMax;
         memberArr = doc.data().Members;
         document.getElementById("member-title").innerHTML = "Members " + memberArr.length + "/" + maxMembers;
+        //Writes the list of members to the page by iterating through an array of joined member names
         for (let i = 0; i < memberArr.length; i++) {
           let member = document.createElement("li");
           member.textContent = memberArr[i];
@@ -37,10 +37,10 @@ function getEvent() {
       console.log("Error getting document:", error);
 
 
-    }))
+    })
 }
 
-// Adds user to event
+// Adds user to event by name on clicking the join event button
 function joinEvent() {
   let user = firebase.auth().currentUser.displayName;
   let document = db.collection("events").doc(docReference.toString());
@@ -54,20 +54,14 @@ function joinEvent() {
       memberList.removeChild(memberList.firstChild);
     }
     getEvent();
-    joinConfirmation();
+    window.alert('Succesfully joined the event!');
+    //Stops the user from joining the event if it is full or if the user has joined the event
+  } else if (memberArr.length == maxMembers) {
+    window.alert("Event is full!");
   } else {
-    alreadyJoinedAlert();
-    console.log("already joined");
-    joinButton.disabled = true;
-  }
-}
-
-function joinConfirmation() {
-  window.alert('Succesfully joined the event!');
-}
-
-function alreadyJoinedAlert() {
     window.alert('Already joined the event!');
+  }
+  joinButton.disabled = true;
 }
 
 getEvent();

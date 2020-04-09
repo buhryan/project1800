@@ -2,6 +2,7 @@
 function writeEventInfo() {
     document.getElementById("eventForm").addEventListener("submit", function (e) {
 
+        //Sets variable values based on user input
         e.preventDefault();
         let eventName = document.getElementById("inputEventName").value;
         let eventDescrip = document.getElementById("inputEventDescription").value;
@@ -14,6 +15,7 @@ function writeEventInfo() {
         let user = firebase.auth().currentUser.displayName;
         let memberList = [user];
 
+        //Adds values to the collection
         db.collection("events").add({
             Name: eventName,
             Description: eventDescrip,
@@ -34,7 +36,7 @@ function writeEventInfo() {
 // Picks the picture url based on the tag
 function pickPicture(tag) {
     let picture;
-    switch(tag) {
+    switch (tag) {
         case "Games":
             picture = "games.jpg";
             break;
